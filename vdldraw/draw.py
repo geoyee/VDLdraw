@@ -2,10 +2,10 @@ import os.path as osp
 import matplotlib.pyplot as plt
 from typing import List, Dict
 from visualdl import LogReader
-from .convert import pb2dict
-from .folder import read_folder, mkdir_p
-from .color import get_xkcd_color
-from .canvas import init_canvas
+from convert import pb2dict
+from folder import read_folder, mkdir_p
+from color import get_xkcd_color
+from canvas import init_canvas
 
 
 def vdl_draw(log_dict: Dict, 

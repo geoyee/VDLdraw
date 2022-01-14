@@ -2,6 +2,7 @@ import yaml
 import os.path as osp
 import matplotlib.pyplot as plt
 from typing import Any
+from vdldraw import PATH
 
 
 def get_yaml_data(yaml_file: str) -> Any:
@@ -13,9 +14,9 @@ def get_yaml_data(yaml_file: str) -> Any:
 
 
 def init_canvas(tag: Any) -> None:
-    plt.style.use("vdldraw/configs/plot.mplstyle")
+    plt.style.use(osp.join(PATH, "configs/plot.mplstyle"))
     plt.figure()
-    yml_path = osp.join("vdldraw/configs", (tag + ".yml"))
+    yml_path = osp.join(PATH, osp.join("configs", (tag + ".yml")))
     yml = get_yaml_data(yml_path)
     plt.xlabel(yml["xlabel"])
     plt.ylabel(yml["ylabel"])
