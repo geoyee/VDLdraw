@@ -133,3 +133,8 @@ vdl_logs
 output
 *.log
 *.png
+
+# package
+build
+dist
+vdldraw.egg-info
