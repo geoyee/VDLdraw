@@ -2,6 +2,12 @@
 
 Batch plot the log files exported from VisualDL using Matplotlib. At present, only mIoU and Acc of Evaluate in PaddleSeg can be exported.
 
+## Install
+
+```shell
+pip install vdldraw
+```
+
 ## Use
 
 ```python

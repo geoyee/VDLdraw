@@ -17,7 +17,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/geoyee/VDLdraw",
     packages=setuptools.find_packages(),
-    install_requires=['psycopg2==2.8.5'],
+    install_requires=REQUIRED_PACKAGES,
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8",
