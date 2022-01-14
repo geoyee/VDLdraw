@@ -2,26 +2,27 @@
 
 Batch plot the log files exported from VisualDL using Matplotlib. At present, only mIoU and Acc of Evaluate in PaddleSeg can be exported.
 
-## Install
+## How to install
+
+It can be installed through `pip`:
 
 ```shell
 pip install vdldraw
 ```
 
-## Use
+## How to use
 
 ```python
 from vdldraw import vdl_draw_folder
 
-vdl_draw_folder(logs_folder)
+vdl_draw_folder(log_folder, save_folder)
+# Args:
+# 	 log_folder (str): Folder path where logs are saved.
+#	 save_folder (str, option): Folder path to save pictures. Default: "output".
 ```
 
-## \*Test
+## TODO
 
-```shell
-# git clone https://github.com/geoyee/VDLdraw
-# cd VDLdraw
-# pip install -r requirements.txt
-# python main.py --log_folder vdl_logs
-```
+- [ ] More tags: Train/Loss and etc.
+- [ ] More params: figuresize, style, mark, etc.
 

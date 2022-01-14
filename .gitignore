@@ -129,6 +129,7 @@ dmypy.json
 .pyre/
 
 # test
+test.py
 vdl_logs
 output
 *.log
