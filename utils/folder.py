@@ -10,7 +10,6 @@ def read_folder(logs_folder: str) -> Dict:
             name, ext = os.path.splitext(file)
             if ext == ".log":
                 if name.split(".")[0] == "vdlrecords":
-                    # TODO: It should be written more clearly
                     name = root.replace("/", "\\").split("\\")[-1]
                 log_dict[name] = osp.join(root, file)
         for dir in dirs:
