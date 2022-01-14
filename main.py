@@ -1,5 +1,5 @@
 import argparse
-from utils import vdl_draw_folder
+from vdldraw import vdl_draw_folder
 
 
 parser = argparse.ArgumentParser(description="input parameters")
