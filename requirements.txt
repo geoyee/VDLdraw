@@ -1,3 +1,4 @@
 visualdl
 matplotlib
 protobuf
+pyyaml

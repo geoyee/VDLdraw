@@ -4,17 +4,19 @@ from typing import List, Dict
 from visualdl import LogReader
 from .convert import pb2dict
 from .folder import read_folder, mkdir_p
+from .color import get_xkcd_color
+from .canvas import init_canvas
 
 
-# TODO: 1.add title / 2.add color / 3.add mark / 4.support more tags
 def vdl_draw(log_dict: Dict, 
              save_folder: str="output", 
              tag_list: List=["mIoU", "Acc"]) -> None:
-    mkdir_p(save_folder)
     sorted(log_dict)
+    mkdir_p(save_folder)
+    color_map = get_xkcd_color()
     for tag in tag_list:
-        plt.figure(figsize=(10, 5))
-        for name, path in log_dict.items():
+        init_canvas(tag)
+        for i, (name, path) in enumerate(log_dict.items()):
             reader = LogReader(file_path=path)        
             x = []
             y = []
@@ -23,9 +25,10 @@ def vdl_draw(log_dict: Dict,
                 d = pb2dict(d)
                 x.append(d["id"])
                 y.append(d["value"])
-            plt.plot(x, y, label=name)
+            plt.plot(x, y, color=color_map[i], label=name)
         plt.legend()
         plt.savefig(osp.join(save_folder, (tag + ".png")))
+        plt.close()
         print(f"Draw {tag} successfully!")
 
 

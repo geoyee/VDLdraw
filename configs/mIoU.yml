@@ -1,0 +1,2 @@
+xlabel: step
+ylabel: mean IoU
