@@ -34,8 +34,7 @@ tag_list = ['Evaluate/mIoU', 'Evaluate/Acc']
 vdl_draw_folder(log_folder, tag_list, save_folder="output", mplstyle=None)
 # Args:
 # 	 log_folder (str): Folder path where logs are saved.
-#    tag_list (list): List of tags to be displayed.
-#	 save_folder (str, option): Folder path to save pictures. Default: "output".
-#    mplstyle (str/path): Matplotlib style system. Default: None(Styles defined using VDLdraw).
+# 	 tag_list (list): List of tags to be displayed.
+# 	 save_folder (str, option): Folder path to save pictures. Default: "output".
+# 	 mplstyle (str/path): Matplotlib style system. Default: None(Styles defined using VDLdraw).
 ```
-
