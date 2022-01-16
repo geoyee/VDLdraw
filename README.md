@@ -18,6 +18,8 @@ pip install vdldraw
 
 ## How to use
 
+Online experiences in [AI Studio](https://aistudio.baidu.com/aistudio/projectdetail/3414078) (Chinese).
+
 ```python
 from vdldraw import get_tags, vdl_draw_folder
 
@@ -38,3 +40,9 @@ vdl_draw_folder(log_folder, tag_list, save_folder="output", mplstyle=None)
 # 	 save_folder (str, option): Folder path to save pictures. Default: "output".
 # 	 mplstyle (str/path): Matplotlib style system. Default: None(Styles defined using VDLdraw).
 ```
+
+## TODO
+
+- [ ] Exporting Image could used academic paper directly (by select `mplstyle`).
+- [ ] More scientific color matching.
+- [ ] \*The config files (YAML) could used better.
