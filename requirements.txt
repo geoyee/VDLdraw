@@ -1,4 +1,4 @@
 visualdl
 matplotlib
 protobuf
-pyyaml
+# pyyaml

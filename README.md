@@ -1,6 +1,6 @@
 # VDLdraw
 
-Batch plot the log files exported from VisualDL using Matplotlib. At present, only mIoU and Acc of Evaluate in PaddleSeg can be exported.
+Batch plot the log files exported from VisualDL using Matplotlib.
 
 |                           VisualDL                           |                           VDLdraw                            |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -19,16 +19,23 @@ pip install vdldraw
 ## How to use
 
 ```python
-from vdldraw import vdl_draw_folder
+from vdldraw import get_tags, vdl_draw_folder
 
-vdl_draw_folder(log_folder, save_folder)
+
+## 1.View available tags
+get_tags(log_folder)
+# Output like this:
+# ['Evaluate/F1', 'Train/loss', 'Evaluate/mIoU', 'Evaluate/Acc']
+
+## 2.Make up tags to be displayed
+tag_list = ['Evaluate/mIoU', 'Evaluate/Acc']
+
+## 3.Save image
+vdl_draw_folder(log_folder, tag_list, save_folder="output", mplstyle=None)
 # Args:
 # 	 log_folder (str): Folder path where logs are saved.
+#    tag_list (list): List of tags to be displayed.
 #	 save_folder (str, option): Folder path to save pictures. Default: "output".
+#    mplstyle (str/path): Matplotlib style system. Default: None(Styles defined using VDLdraw).
 ```
-
-## TODO
-
-- [ ] More tags: Train/Loss and etc.
-- [ ] More params: figuresize, style, mark, etc.
 

@@ -9,7 +9,7 @@ with open("requirements.txt") as fin:
 
 setuptools.setup(
     name="vdldraw",
-    version="0.1.4",
+    version="0.1.5",
     author="geoyee",
     author_email="geoyee@yeah.net",
     description="Batch plot the log files exported from VisualDL using Matplotlib.",
