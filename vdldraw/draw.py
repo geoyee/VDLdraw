@@ -17,6 +17,10 @@ def vdl_draw(log_dict: Dict,
     sorted(log_dict)
     mkdir_p(save_folder)
     color_map = get_xkcd_color()
+    if len(log_dict) > len(color_map):
+        raise AssertionError("Number of logs should not greater than {0}, but get {1}".format(
+            len(color_map), len(log_dict)
+        ))
     for tag in tag_list:
         init_canvas(tag, mplstyle)
         for i, (name, path) in enumerate(log_dict.items()):
