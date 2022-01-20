@@ -4,9 +4,7 @@ Batch plot the log files exported from VisualDL using Matplotlib.
 
 |                           VisualDL                           |                           VDLdraw                            |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![Evaluate_mIoU](https://user-images.githubusercontent.com/71769312/149524214-4b673b9a-028f-4b62-a2ba-edcae44ebb01.png) | <img src="https://user-images.githubusercontent.com/71769312/149523531-30db9c22-44f8-4d41-8761-2c1554e2014e.png" alt="mIoU"  /> |
-
-
+| ![vdlmiou](https://user-images.githubusercontent.com/71769312/150273335-ef849dd6-a47f-4972-90b5-d917c24419dd.png) | ![Evaluate@mIoU](https://user-images.githubusercontent.com/71769312/150273323-4fbfb5c7-1353-4c05-b386-dc61db741eda.png) |
 
 ## How to install
 
@@ -41,8 +39,12 @@ vdl_draw_folder(log_folder, tag_list, save_folder="output", mplstyle=None)
 # 	 mplstyle (str/path): Matplotlib style system. Default: None(Styles defined using VDLdraw).
 ```
 
-## TODO
+## Colormap
 
-- [ ] Exporting Image could used academic paper directly (by select `mplstyle`).
-- [ ] More scientific color matching.
-- [ ] \*The config files (YAML) could used better.
+Colormap reference [antv's contrasting orange](https://antv.vision/zh/docs/specification/language/palette#%E5%BC%BA%E5%AF%B9%E6%AF%94%E4%B8%BB%E9%A2%98), 20 colors in total.
+
+![colors](https://user-images.githubusercontent.com/71769312/150271480-bea94bf9-140d-4f0d-839f-4b8022397e62.png)
+
+## Style
+
+If you need use some styles, you could use [SciencePlots](https://github.com/garrettj403/SciencePlots). This repo has Matplotlib styles to format your figures for scientific papers, presentations and theses.

@@ -1,37 +1,37 @@
 # Set default figure size
-figure.figsize : 8, 6
+figure.figsize : 7, 5.25
 
 # Set x axis
 xtick.direction : in
-xtick.major.size : 3
-xtick.major.width : 0.5
-xtick.minor.size : 1.5
-xtick.minor.width : 0.5
+xtick.major.size : 6.
+xtick.major.width : 1.
+xtick.minor.size : 3.
+xtick.minor.width : 1.
 xtick.minor.visible : True
 xtick.top : True
 
 # Set y axis
 ytick.direction : in
-ytick.major.size : 3
-ytick.major.width : 0.5
-ytick.minor.size : 1.5
-ytick.minor.width : 0.5
+ytick.major.size : 6.
+ytick.major.width : 1.
+ytick.minor.size : 3.
+ytick.minor.width : 1.
 ytick.minor.visible : True
 ytick.right : True
 
 # Set line widths
-axes.linewidth : 0.5
-grid.linewidth : 0.5
-lines.linewidth : 1.
+axes.linewidth : 1.
+grid.linewidth : 1.
+lines.linewidth : 2.
 
 # Remove legend frame
 legend.frameon : False
 
 # Always save as 'tight'
 savefig.bbox : tight
-savefig.pad_inches : 0.05
+savefig.pad_inches : 0.1
 
 # Use serif fonts
-# font.serif : Times
 font.family : serif
+font.size : 12.
 mathtext.fontset : dejavuserif
