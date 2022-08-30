@@ -1,8 +1,8 @@
-from typing import Dict, Any
+from typing import Optional, Dict, Any
 from google.protobuf.descriptor import FieldDescriptor
 
 
-def pb2dict(obj: Any) -> Dict:
+def pb2dict(obj: Any) -> Optional[Dict]:
     adict = {}
     if not obj.IsInitialized():
         return None
