@@ -7,5 +7,5 @@ sys.path.append(PATH)
 # print(PATH)
 
 
-from folder import get_tags
-from draw import vdl_draw_folder
+from .folder import get_tags
+from .draw import vdl_draw_folder
